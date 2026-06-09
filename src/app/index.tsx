@@ -1,7 +1,11 @@
-import { View, Text, Image, StyleSheet, TextInput} from "react-native"
-import { Button2 } from "@/components/button"
+import { View, Text, Image, StyleSheet, TextInput, } from "react-native";
+import { Button2 } from "@/components/button";
+import React, { useState } from "react";
+import { Dropdown } from "@/components/Dropdown";
+
 
 export default function App() {
+
   return (
     <View style={style.container}>
       <View style={style.div1}>
@@ -9,7 +13,8 @@ export default function App() {
         <Image source={require('@/components/copa.jpg')} style={style.img} />
       </View>
       <TextInput placeholder="Seu nome?" style={style.input} />
-      <TextInput placeholder="Qual seleção será campeã da copa?" style={style.input} />
+      <Text>Qual seleção será campeã da copa?</Text>
+      <Dropdown />
 
       <Button2 title="Enviar Palpite" onPress={() => console.log('Palpite enviado, começe a rezar')} />
     </View>
